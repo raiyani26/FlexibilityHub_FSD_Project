@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery (required for Bootstrap's JS) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- Popper.js (required for Bootstrap's modals) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        function openCity(evt, cityName) {
+            // Get all elements with class="tabcontent" and hide them
+            let tabcontent = document.getElementsByClassName("tabcontent");
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            let tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // Show the selected tab content and add "active" class to the button
+            document.getElementById(cityName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Set the first tab to be active when the page loads
+        document.querySelector(".tablinks").click();
+    </script>
+</head>
+
+<body>
+    <header class="header absolute" style="position: fixed; z-index: 1;">
+        <!-- nav2 -->
+        <nav class="navbar navbar-expand-lg a2">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" href="FlexibilityHub.html"><img src="img/logo1.png"
+                        style="height: 40px; width: 70px; border-radius: 50%;"></a>
+                <button class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto d-flex" style="gap: 35px;">
+                        <li class="nav-item ">
+                            <a class="nav-link btn a1 b1" href="FlexibilityHub.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn a1 b1" href="classes.html">Classes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn a1 b1" href="program.html">Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn a1 b1" href="teacher.html">Teachers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn a1 b1" href="aboutus.html">AboutUs</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav justify-content-end">
+                        <li class="nav-item text-whit">
+                            <a href="signup.html" class="nav-link a1 b1">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login.html" class="nav-link a1 b1">Log In</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header><br><br>
+    <div class="a2 container-fluid" style="padding-bottom: 2%;">
+        <div class="row relative">
+            <div class="col-md-6">
+                <h1 class="a1"
+                    style=" text-align: center; font-weight: bolder; font-size: 45px; opacity: 0.9; display: inline-block; padding: 5% 0 0 25%; color: rgb(15, 116, 20);">
+                    Online Yoga Classes</h1>
+                <p class="a1 classes_p">Find your perfect match with online yoga classes for everyone. Work on strength
+                    and mobility with Vinyasa, Hatha or Ashtanga, relax deeply with a Yin or Restorative yoga class,
+                    gain clarity and focus through meditation and breathwork, or sit back and watch our talks and
+                    tutorials.</p>
+                <div style=" padding:0 0 0 190px">
+                    <a href="follow.html">
+                        <button type="submit" class="btn button1"
+                            style="border-radius: 30px; width:250px; height: 50px; font-weight: bold;background-color:rgb(211, 65, 65);color: white;">Try
+                            us free for 14 days</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <!-- Tab links -->
+    <div class="tab">
+        <button class="tablinks active a1" onclick="openCity(event, 'classes')"
+            style="border-radius: 30px;">Classes</button>
+        <button class="tablinks a1" onclick="openCity(event, 'live')" style="border-radius: 30px;">Live Classes</button>
+        <button class="tablinks a1" onclick="openCity(event, 'program')" style="border-radius: 30px;">Programs</button>
+        <button class="tablinks a1" onclick="openCity(event, 'playlist')" style="border-radius: 30px;">Playlist</button>
+
+    </div><br>
+    <!-- for classes -->
+    <!-- Tab content -->
+    <div id="classes" class="tabcontent active">
+        <div class="image-gallery">
+            <div class="image-item">
+                <img src="img/x1.avif" style="height:220px;" alt="London Image 1" class="image1">
+                <div class="overlay" style="font-size: 13px;">
+                    <h5>Moving from your centre
+                    </h5>Step into a 45-minute practice that focuses on strengthening your back and core, the vital
+                    support system for your body and your life.
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="img/x2.avif" alt="London Image 1" style="height:220px;" class="image1">
+                <div class="overlay" style="font-size: 13px;">
+                    <h5>Grief meditation</h5>Allowing grief its space to be is a difficult process.You can experience a
+                    longer version of Grief meditation here.
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="img/x3.png" alt="London Image 1" class="image1" style="height: 220px;">
+                <div class="overlay" style="font-size: 13px;">
+                    <h5>Freedom for hips</h5>It's very common for us to hold on to tension in and around our hips, so
+                    free yourself and your hips with this sequence of nourishing hip openers.
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="img/x4.avif" alt="London Image 1" class="image1">
+                <div class="overlay" style="font-size: 13px;">
+                    <h5>Flow for fun: Take yourself less seriously</h5>A dynamic 45-minute Flow Vinyasa class designed
+                    for all levels.
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="img/x5.webp" alt="London Image 1" class="image1">
+                <div class="overlay" style="font-size: 13px;">
+                    <h5>Chair Yoga fusion for energy</h5>This fun, fluid fusion chair-based class is perfect as a work
+                    break or any time during the day when you need a boost of energy.
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="img/x6.jpg" alt="London Image 1" class="image1" style="height: 220px;">
+                <div class="overlay" style="font-size: 13px;">
+                    <h5>Heart opening Yoga</h5>This class cultivates gratitude, self-compassion, and loving kindness.
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="img/x7.jpg" alt="London Image 1" class="image1" style="height: 220px;">
+                <div class="overlay" style="font-size: 13px;">
+                    <h5>Embodied energy meditation</h5>you'll explore the vibrant energy within your
+                    body your prana or life force by becoming aware of subtle sensations and the flow of breath.
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="img/y15.jpg" alt="London Image 1" class="image1" style="height: 220px;">
+                <div class="overlay" style="font-size: 13px;">
+                    <h5>Power from the inSIDE</h5>A reduced version of the 60-minute flow of the same
+                    name, designed to help you connect with your inner power.
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="img/x9.jpg" alt="London Image 1" class="image1">
+                <div class="overlay" style="font-size: 13px;">
+                    <h5>Balanced in every way</h5>Join for a short practice to find your sense of balance, bring
+                    awareness to your vitality, and create peace in action.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="live" class="tabcontent">
+        <div class="container">
+            <h2 class="text-center" style="font-weight: bold; font-size: 30px; color: rgb(15, 116, 20);">Live Yoga
+                Classes</h2>
+            <p class="text-center" style="font-size: 16px; color: black;">Join our live yoga classes from anywhere.
+                Explore a variety of live sessions with experienced instructors.</p>
+
+            <!-- Image Gallery for Live Classes -->
+
+            <div class="image-gallery1">
+                <div class="container relative"
+                    style="background-color: rgb(228, 227, 227); width: 90%; padding: 3% 10% 0 0; padding-left: 5%;">
+                    <div class="image-item1">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/y11.jpg" alt="Live Class 1"
+                                    style="width: 100%; height: 200px; border-radius: 15px; padding-bottom: 10px;">
+                            </div>
+                            <div class="col-md-6">
+                                <p style="font-weight: bold; color: rgb(15, 116, 20);">Vinyasa Flow
+                                </p>
+                                <p style="text-align: left; width: 500px;">Join our energizing Vinyasa Flow live class
+                                    every Monday at 10:00
+                                    AM.</p>
+                                <!-- Join Now Button to Trigger Modal -->
+                                <button type="button" class="btn btn-outline-danger live1" data-toggle="modal"
+                                    data-target="#vinyasaModal"
+                                    style="width: 100%; border-radius: 20px; font-weight: bold;">Join
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container relative"
+                    style="background-color: rgb(228, 227, 227); width: 90%; padding: 3% 10% 0 0; padding-left: 5%;">
+                    <div class="image-item1">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/y14.jpg" alt="Live Class 1"
+                                    style="width: 100%; height: 200px; border-radius: 15px; padding-bottom: 10px;">
+                            </div>
+                            <div class="col-md-6">
+                                <p style="font-weight: bold; color: rgb(15, 116, 20);">Hatha Yoga
+                                </p>
+                                <p style="text-align: left; width: 500px;">Experience balance, strength in our Hatha
+                                    Yoga live class every Wednesday
+                                    at 6:00 PM.</p>
+                                <!-- Join Now Button to Trigger Modal -->
+                                <button type="button" class="btn btn-outline-danger live1" data-toggle="modal"
+                                    data-target="#hathaModal"
+                                    style="width: 100%; border-radius: 20px; font-weight: bold;">Join
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container relative"
+                    style="background-color: rgb(228, 227, 227); width: 90%; padding: 3% 10% 0 0; padding-left: 5%;">
+                    <div class="image-item1">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/y9.avif" alt="Live Class 1"
+                                    style="width: 100%; height: 200px; border-radius: 15px; padding-bottom: 10px;">
+                            </div>
+                            <div class="col-md-6">
+                                <p style="font-weight: bold; color: rgb(15, 116, 20);">Restorative Yoga
+                                </p>
+                                <p style="text-align: left; width: 500px;">Unwind and relax with our Restorative Yoga
+                                    live class every Friday at
+                                    7:00
+                                    PM.</p>
+                                <!-- Join Now Button to Trigger Modal -->
+                                <button type="button" class="btn btn-outline-danger live1" data-toggle="modal"
+                                    data-target="#restorativeModal"
+                                    style="width: 100%; border-radius: 20px; font-weight: bold;">Join
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Vinyasa Flow -->
+        <div class="modal fade" id="vinyasaModal" tabindex="-1" role="dialog" aria-labelledby="vinyasaModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="vinyasaModalLabel">Vinyasa Flow Live Class</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe style="width: 100%;" controls src="https://www.youtube.com/embed/0fPk-UzQWOs"></iframe>
+                        <p>Join our Vinyasa Flow live class every Monday at 10:00 AM. Learn the art of moving with
+                            breath to build strength and flexibility.</p>
+                        <p><strong>Instructor:</strong> Jane Doe</p>
+                        <p><strong>Duration:</strong> 60 minutes</p>
+                        <p><strong>Location:</strong> Online (Zoom link will be provided)</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="signup.html">
+                            <button type="button" class="btn btn-primary">Join Class</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Hatha Yoga -->
+        <div class="modal fade" id="hathaModal" tabindex="-1" role="dialog" aria-labelledby="hathaModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="hathaModalLabel">Hatha Yoga Live Class</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe style="width: 100%;" controls src="https://www.youtube.com/embed/c7sUpBo7-qE"></iframe>
+                        <p>Join our Hatha Yoga live class every Wednesday at 6:00 PM. Focus on posture, alignment,
+                            and
+                            breathwork for improved strength.</p>
+                        <p><strong>Instructor:</strong> John Smith</p>
+                        <p><strong>Duration:</strong> 75 minutes</p>
+                        <p><strong>Location:</strong> Online (Zoom link will be provided)</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="signup.html">
+                            <button type="button" class="btn btn-primary">Join Class</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Restorative Yoga -->
+        <div class="modal fade" id="restorativeModal" tabindex="-1" role="dialog"
+            aria-labelledby="restorativeModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="restorativeModalLabel">Restorative Yoga Live Class</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe style="width: 100%;" controls src="https://www.youtube.com/embed/c56tAJ9KjRg"></iframe>
+                        <p>Join our Restorative Yoga live class every Friday at 7:00 PM to relax and release tension
+                            with gentle poses and deep breathing.</p>
+                        <p><strong>Instructor:</strong> Emma White</p>
+                        <p><strong>Duration:</strong> 60 minutes</p>
+                        <p><strong>Location:</strong> Online (Zoom link will be provided)</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="signup.html">
+                            <button type="button" class="btn btn-primary">Join Class</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="program" class="tabcontent">
+        <div class="image-gallery">
+            <div class="image-item">
+                <img src="img/xp1.jpeg" alt="Tokyo Image 1" style="height:250px;">
+                <div class="img1-overlay-text">30 Days of Yoga
+                    <p style="font-size: 16px;">30 Classes
+                        <a href="signup.html">
+                        <button type="submit" class=" btn btn-outline-success a2 a1"
+                            style="border-radius:25px; width:100px; height:30px; font-weight: bold; font-size:12px;">All
+                            levels
+                        </button></a>
+                    </p>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="img/xp2.avif" alt="Tokyo Image 1" style="height: 250px;">
+                <div class="img1-overlay-text">Mastering Anxiety
+                    <p style="font-size: 16px;">8 Classes
+                        <a href="signup.html">
+                        <button type="submit" class=" btn btn-outline-success a2 a1"
+                            style="border-radius:25px; width:100px; height:30px; font-weight: bold; font-size:12px;">All
+                            levels
+                        </button></a>
+                    </p>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="img/xp3.avif" alt="Tokyo Image 1" style="height: 250px;">
+                <div class="img1-overlay-text">Powerfully Present
+                    <p style="font-size: 16px;">3 weeks.18 Classes
+                        <a href="signup.html">
+                        <button type="submit" class=" btn btn-outline-success a2 a1"
+                            style="border-radius:25px; width:100px; height:30px; font-weight: bold; font-size:12px;">All
+                            levels
+                        </button></a>
+                    </p>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="img/xp4.avif" alt="Tokyo Image 1" style="height: 250px;">
+                <div class="img1-overlay-text">Your Pilates Week
+                    <p style="font-size: 16px;">1 weeks.7 Classes
+                        <a href="signup.html">
+                        <button type="submit" class=" btn btn-outline-success a2 a1"
+                            style="border-radius:25px; width:100px; height:30px; font-weight: bold; font-size:12px;">All
+                            levels
+                        </button></a>
+                    </p>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="img/xp5.jpg" alt="Tokyo Image 1" style="height: 250px;">
+                <div class="img1-overlay-text">Yoga for kids
+                    <p style="font-size: 16px;">5 Classes
+                        <a href="signup.html">
+                        <button type="submit" class=" btn btn-outline-success a2 a1"
+                            style="border-radius:25px; width:100px; height:30px; font-weight: bold; font-size:12px;">All
+                            levels
+                        </button></a>
+                    </p>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="img/xp6.jpeg" alt="Tokyo Image 1" style="height: 250px;">
+                <div class="img1-overlay-text">body,breath,mind
+                    <p style="font-size: 16px;">2 weeks.16 Classes
+                        <a href="signup.html">
+                        <button type="submit" class=" btn btn-outline-success a2 a1"
+                            style="border-radius:25px; width:100px; height:30px; font-weight: bold; font-size:12px;">All
+                            levels
+                        </button></a>
+                    </p>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="img/xp7.jpeg" alt="Tokyo Image 1" style="height: 250px;">
+                <div class="img1-overlay-text">20 Mindful Minutes
+                    <p style="font-size: 16px;">10 Classes
+                        <a href="signup.html">
+                        <button type="submit" class=" btn btn-outline-success a2 a1"
+                            style="border-radius:25px; width:100px; height:30px; font-weight: bold; font-size:12px;">All
+                            levels
+                        </button></a>
+                    </p>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="img/xp8.avif" alt="Tokyo Image 1" style="height: 250px;">
+                <div class="img1-overlay-text">The Resilience Program
+                    <p style="font-size: 16px;">2 weeks.12 Classes
+                        <a href="signup.html">
+                        <button type="submit" class=" btn btn-outline-success a2 a1"
+                            style="border-radius:25px; width:100px; height:30px; font-weight: bold; font-size:12px;">All
+                            levels
+                        </button></a>
+                    </p>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="img/xp9.webp" alt="Tokyo Image 1" style="height: 250px;">
+                <div class="img1-overlay-text">Yoga for beginner
+                    <p style="font-size: 16px;">7 Classes
+                        <a href="signup.html">
+                        <button type="submit" class=" btn btn-outline-success a2 a1"
+                            style="border-radius:25px; width:100px; height:30px; font-weight: bold; font-size:12px;">All
+                            levels
+                        </button></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--playlist -->
+    <div id="playlist" class="tabcontent">
+        <div class="container">
+            <!-- Image Gallery for Live Classes -->
+            <div class="image-gallery1 container-fluid d-flex justify-content-around">
+                <div class="image-item1">
+                    <img src="img/nature1.jpg" alt="Live Class 1"
+                        style="width: 100%; height: 200px; border-radius: 15px;">
+                    <p class="text-center" style="font-weight: bold; color: rgb(100, 24, 135); padding-top: 2%;">Gental
+                        Morning Yoga(10-40
+                        mins)</p>
+                    <!-- Join Now Button to Trigger Modal -->
+                    <button type="button" class="btn btn-outline-danger live1" data-toggle="modal"
+                        data-target="#playlist1" style="width: 100%; border-radius: 20px; font-weight: bold;">Join
+                        Now</button>
+                </div>
+
+                <div class="image-item1">
+                    <img src="img/nature2.jpg" alt="Live Class 2"
+                        style="width: 100%; height: 200px; border-radius: 15px;">
+                    <p class="text-center" style="font-weight: bold; color: rgb(100, 24, 135);padding-top: 2%;">Music
+                        For Shavasana(5
+                        mins)</p>
+                    <!-- Join Now Button to Trigger Modal -->
+                    <button type="button" class="btn btn-outline-danger live1" data-toggle="modal"
+                        data-target="#playlist2" style="width: 100%; border-radius: 20px; font-weight: bold;">Join
+                        Now</button>
+                </div>
+
+                <div class="image-item1">
+                    <img src="img/nature3.jpg" alt="Live Class 3"
+                        style="width: 100%; height: 200px; border-radius: 15px;">
+                    <p class="text-center" style="font-weight: bold; color: rgb(100, 24, 135);padding-top: 2%;">garden
+                        Yoga(60 mins)
+                    </p>
+                    <!-- Join Now Button to Trigger Modal -->
+                    <button type="button" class="btn btn-outline-danger live1" data-toggle="modal"
+                        data-target="#playlist3" style="width: 100%; border-radius: 20px; font-weight: bold;">Join
+                        Now</button>
+                </div>
+            </div>
+            <div class="image-gallery1 container-fluid d-flex justify-content-around">
+                <div class="image-item1">
+                    <img src="img/nature4.jpg" alt="Live Class 1"
+                        style="width: 100%; height: 200px; border-radius: 15px;">
+                    <p class="text-center" style="font-weight: bold; color: rgb(100, 24, 135); padding-top: 2%;">
+                        Favourites Yoga(45-50
+                        mins)</p>
+                    <!-- Join Now Button to Trigger Modal -->
+                    <button type="button" class="btn btn-outline-danger live1" data-toggle="modal"
+                        data-target="#playlist4" style="width: 100%; border-radius: 20px; font-weight: bold;">Join
+                        Now</button>
+                </div>
+                <div class="image-item1">
+                    <img src="img/nature5.jpg" alt="Live Class 3"
+                        style="width: 100%; height: 200px; border-radius: 15px;">
+                    <p class="text-center" style="font-weight: bold; color: rgb(100, 24, 135);padding-top: 2%;">Home
+                        yoga retreat(5 mins)
+                    </p>
+                    <!-- Join Now Button to Trigger Modal -->
+                    <button type="button" class="btn btn-outline-danger live1" data-toggle="modal"
+                        data-target="#playlist5" style="width: 100%; border-radius: 20px; font-weight: bold;">Join
+                        Now</button>
+                </div>
+                <div class="image-item1">
+                    <img src="img/nature6.jpg" alt="Live Class 2"
+                        style="width: 100%; height: 200px; border-radius: 15px;">
+                    <p class="text-center" style="font-weight: bold; color: rgb(100, 24, 135);padding-top: 2%;">Yoga for
+                        (clinical) depression/anxiety(15
+                        mins)</p>
+                    <!-- Join Now Button to Trigger Modal -->
+                    <button type="button" class="btn btn-outline-danger live1" data-toggle="modal"
+                        data-target="#playlist6" style="width: 100%; border-radius: 20px; font-weight: bold;">Join
+                        Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for playlist1 Flow -->
+        <div class="modal fade" id="playlist1" tabindex="-1" role="dialog" aria-labelledby="vinyasaModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="vinyasaModalLabel">Gental Morning Yoga</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe style="width: 100%;" controls src="https://www.youtube.com/embed/60Gnd8Wy0gE"></iframe>
+                        <p>Join our Gental Morning Yoga every day at 6:00 AM. Learn the art of moving with
+                            breath to build strength and flexibility.</p>
+                        <p><strong>Instructor:</strong> Jane Doe</p>
+                        <p><strong>Duration:</strong>10 minutes</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="signup.html">
+                            <button type="button" class="btn btn-primary">Join Class</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for playlist2 Yoga -->
+        <div class="modal fade" id="playlist2" tabindex="-1" role="dialog" aria-labelledby="hathaModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="hathaModalLabel">Shavasana Yoga</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe style="width: 100%;" controls src="https://www.youtube.com/embed/FBEbOSmpnns"></iframe>
+
+                        <p>Join Shavasna yoga live class every day at 10:00 AM. Focus on posture, alignment, and
+                            breathwork for improved strength.</p>
+                        <p><strong>Instructor:</strong> John Smith</p>
+                        <p><strong>Duration:</strong>5 minutes</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="signup.html">
+                            <button type="button" class="btn btn-primary">Join Class</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for playlist3 Yoga -->
+        <div class="modal fade" id="playlist3" tabindex="-1" role="dialog" aria-labelledby="restorativeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="restorativeModalLabel">Garden Yoga</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe style="width: 100%;" controls src="https://www.youtube.com/embed/WKK84yEBZoo"></iframe>
+
+                        <p>Join our Garden Yoga live class Sunday at 6:00 AM to relax and release tension
+                            with gentle poses and deep breathing.</p>
+                        <p><strong>Instructor:</strong> Emma White</p>
+                        <p><strong>Duration:</strong> 60 minutes</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="signup.html">
+                            <button type="button" class="btn btn-primary">Join Class</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for playlist4 Yoga -->
+        <div class="modal fade" id="playlist4" tabindex="-1" role="dialog" aria-labelledby="restorativeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="restorativeModalLabel">Favourite Yoga</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe style="width: 100%;" controls src="https://www.youtube.com/embed/c8n3dqJW4y0"></iframe>
+
+                        <p>Join our Favourite Yoga live class Sunday at 2:00 PM to relax and release tension
+                            with gentle poses and deep breathing.</p>
+                        <p><strong>Instructor:</strong> Emma White</p>
+                        <p><strong>Duration:</strong> 45 minutes</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="signup.html">
+                            <button type="button" class="btn btn-primary">Join Class</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for playlist5 Yoga -->
+        <div class="modal fade" id="playlist5" tabindex="-1" role="dialog" aria-labelledby="restorativeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="restorativeModalLabel">Home yoga retreat</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe style="width: 100%;" controls src="https://www.youtube.com/embed/c-eVLrilJdM"></iframe>
+
+                        <p>Join our Favourite Yoga live class Sunday at 4:00 PM to relax and release tension
+                            with gentle poses and deep breathing.</p>
+                        <p><strong>Instructor:</strong> Emma White</p>
+                        <p><strong>Duration:</strong> 45 minutes</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="signup.html">
+                            <button type="button" class="btn btn-primary">Join Class</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for playlist6 Yoga -->
+        <div class="modal fade" id="playlist6" tabindex="-1" role="dialog" aria-labelledby="hathaModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="hathaModalLabel">depression/anxiety Yoga</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe style="width: 100%;" controls src="https://www.youtube.com/embed/VgdAcENXy84"></iframe>
+
+                        <p>Join depression/anxiety yoga live class every day at 9:00 PM. Focus on posture, alignment,
+                            and
+                            breathwork for improved strength.</p>
+                        <p><strong>Instructor:</strong> John Smith</p>
+                        <p><strong>Duration:</strong>15 minutes</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="signup.html">
+                            <button type="button" class="btn btn-primary">Join Class</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid">
+        <br><br><br><br>
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="a1"
+                    style="text-align: left; font-weight: bolder; font-size: 45px; opacity: 0.9; display: inline-block; padding: 5% 0 0 25%; color: rgb(15, 116, 20);">
+                    Make yoga part of your life</h1>
+                <p class="a1 classes_p">Sharing the love of yoga to create positive change in the world</p>
+            </div>
+            <div class="col-md-4">
+                <img src="img/xp2.jpeg" alt="  " style="height: 100%; width: 120%; border-radius: 40px;">
+            </div>
+            <div class="col-md-3">
+                <div style=" padding:50px 0 0 170px">
+                    <a href="follow.html">
+                        <button type="submit" class="btn button1"
+                            style="border-radius: 30px; width:250px; height: 50px; font-weight: bold;background-color:rgb(211, 65, 65);color: white;">Try
+                            14 days for free</button></a>
+                    <p
+                        style="text-align: left; font-size: 16px; opacity: 0.9; display: inline-block; padding: 5% 0 0 25%;">
+                        Then enjoy full membership for 1600₹ / month per month, and cancel any time
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer section --> <br><br><br>
+    <hr>
+    <footer class="absolute">
+        <div class="bg-light d-flex justify-content-around">
+            <div class="text-dark" style=" margin:15px 0 0 0;">
+                <div class="text-secondary">FlexibilityHub</div>
+                <div>Home</div>
+                <div>About Us</div>
+                <div>Live streams</div>
+            </div>
+            <div class="text-dark" style=" margin:15px 0 0 0;">
+                <div class="text-secondary">Support</div>
+                <div>Community</div>
+                <div>Guidelines</div>
+            </div>
+            <div class="text-dark" style=" margin:15px 0 0 0;">
+                <div class="text-secondary">Help</div>
+                <div>Terms & Condition</div>
+                <div>Privacy policy</div>
+                <div>Cookies Settings</div>
+            </div>
+            <div class="text-dark" style=" margin:15px 0 0 0;">
+                <div class="text-secondary" style="font-size: 25px;">Follow Us</div>
+                <ul class="list-unstyled">
+                    <li class="box-inline" style="text-align: start;">
+                        <a href="#">
+                            <i class="fas fa-map-marker-alt"
+                                style="color: black; font-size: 20px; padding-right: 20px;"></i>
+                            ABC Street, Gujarat
+                        </a>
+                    </li>
+                    <li class="box-inline">
+                        <a href="#">
+                            <i class="fas fa-phone" style="color: black; font-size: 20px; padding-right: 20px;"></i>
+                            +91-8320727170
+                        </a>
+                    </li>
+                    <li class="box-inline">
+                        <a href="mailto:bidsqr@demolink.org">
+                            <i class="far fa-envelope" style="color: black; font-size: 20px; padding-right: 20px;"></i>
+                            princypatel123@gmail.com
+                        </a>
+                    </li>
+                </ul>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="page-footer-icon-list social-icons-list d-flex justify-content-center"
+                            style="margin:auto;">
+                            <li><a class="icon icon-sm-bigger icon-gray-dark fab fa-facebook" href="#"
+                                    style="padding: 10px; color: black; font-size: 20px;"></a></li>
+                            <li><a class="icon icon-sm-bigger icon-gray-dark fab fa-twitter" href="#"
+                                    style="padding: 10px; color: black; font-size: 20px;"></a></li>
+                            <li><a class="icon icon-sm-bigger icon-gray-dark fab fa-instagram" href="#"
+                                    style="padding: 10px; color: black; font-size: 20px;"></a></li>
+                            <li><a class="icon icon-sm-bigger icon-gray-dark fab fa-google" href="#"
+                                    style="padding: 10px; color: black; font-size: 20px;"></a></li>
+                            <li><a class="icon icon-sm-bigger icon-gray-dark fab fa-linkedin" href="#"
+                                    style="padding: 10px; color: black; font-size: 20px;"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
